@@ -8,6 +8,7 @@ from serpent.utilities import Singleton
 class SerpentOneFingerDeathPunchGame(Game, metaclass=Singleton):
 
     def __init__(self, **kwargs):
+
         kwargs["platform"] = "steam"
 
         kwargs["window_name"] = "One Finger Death Punch"
@@ -20,15 +21,14 @@ class SerpentOneFingerDeathPunchGame(Game, metaclass=Singleton):
         self.api_class = OneFingerDeathPunchAPI
         self.api_instance = None
 
-        self.frame_transformation_pipeline_string = "RESIZE:100x100|GRAYSCALE|FLOAT"
+        self.frame_transformation_pipeline_string = "RESIZE:72x128|FLOAT" #"RESIZE:100x100|GRAYSCALE|FLOAT"
 
     @property
     def screen_regions(self):
         regions = {
             # MENU BUTTONS
-            # These regions aren't accurate.
             "MAIN_MENU_CLICK_MOUSE_PLAY": (423, 527, 473, 751),
-            "MODE_MENU_SURVIVAL": (93, 658, 629, 1108),
+            "MODE_MENU_SURVIVAL": (200, 800, 500, 1000),
             # SURVIVAL MENU BUTTONS
             "SURVIVAL_MENU_BUTTON_TOP": (281, 458, 349, 822),
             "SURVIVAL_PRE_GAME_START_BUTTON": (81, 897, 124, 1085),
