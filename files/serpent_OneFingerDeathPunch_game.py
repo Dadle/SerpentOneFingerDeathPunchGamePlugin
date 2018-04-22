@@ -21,7 +21,7 @@ class SerpentOneFingerDeathPunchGame(Game, metaclass=Singleton):
         self.api_class = OneFingerDeathPunchAPI
         self.api_instance = None
 
-        self.frame_transformation_pipeline_string = "RESIZE:72x128|FLOAT" #"RESIZE:100x100|GRAYSCALE|FLOAT"
+        #self.frame_transformation_pipeline_string = "RESIZE:128x72|FLOAT" #"RESIZE:100x100|GRAYSCALE|FLOAT"
 
     @property
     def screen_regions(self):
@@ -34,6 +34,8 @@ class SerpentOneFingerDeathPunchGame(Game, metaclass=Singleton):
             "SURVIVAL_PRE_GAME_START_BUTTON": (81, 897, 124, 1085),
             # GAME BUTTONS
             "GAME_OVER_SCORE_BUTTON": (445, 1070, 505, 1120),
+            # GAMEPLAY REGIONS
+            "KILL_COUNT": (50, 600, 145, 675),
 
             #END HIGHSCORES LETTERS
             "HS_LETTER_A": (343, 120, 368, 140),

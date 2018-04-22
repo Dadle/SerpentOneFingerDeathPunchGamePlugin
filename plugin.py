@@ -12,7 +12,7 @@ class SerpentOneFingerDeathPunchGamePlugin(offshoot.Plugin):
     ]
 
     config = {
-        "fps": 4
+        "fps": 10
     }
 
     @classmethod
