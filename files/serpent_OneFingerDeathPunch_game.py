@@ -21,7 +21,7 @@ class SerpentOneFingerDeathPunchGame(Game, metaclass=Singleton):
         self.api_class = OneFingerDeathPunchAPI
         self.api_instance = None
 
-        #self.frame_transformation_pipeline_string = "RESIZE:128x72|FLOAT" #"RESIZE:100x100|GRAYSCALE|FLOAT"
+        self.frame_transformation_pipeline_string = "RESIZE:84x84|GRAYSCALE|FLOAT" #"RESIZE:100x100|GRAYSCALE|FLOAT"
 
     @property
     def screen_regions(self):
